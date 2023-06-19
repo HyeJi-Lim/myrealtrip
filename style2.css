@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+/* 헤더 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.04);
+    backdrop-filter:blur(40px);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.16);
+}
+
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav ul li{
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav a{
+    text-decoration: none;
+    margin-left: 40px;
+    color:#fff;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+.site-nav a:hover{
+    color:#222;
+}
+
+.site-nav2 ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav2 ul li{
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav2 a{
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 16px;
+    color:#fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.site-nav .clicked{
+  color:#222;
+  font-weight: 500;
+}
+
+/* 히어로 */
+.hero{
+    height: 100vh;
+    width: 100%;
+    max-height: 810px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    color: white !important;
+}
+
+.swiper-button-prev{
+    margin-left: 6% !important;
+    margin-top: 4% !important;
+}
+
+.swiper-button-next{
+    margin-right: 6% !important;
+    margin-top: 4% !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 44px !important;
+  font-weight: 600 !important;
+}
+
+.swiper-pagination-bullet {
+    background: rgb(149, 149, 149) !important;
+  }
+
+.back1{
+    position: absolute;
+    z-index: 1;
+    width: 100%; /* 이미지의 가로 크기를 원본 비율에 맞게 조정 */
+    height: 100%; /* 슬라이드의 높이에 맞게 이미지의 세로 크기 조정 */
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.humanback1{
+    position: absolute;
+    z-index: 3;
+    width: 874px; /* 이미지의 가로 크기를 원본 비율에 맞게 조정 */
+    height: 602px; /* 슬라이드의 높이에 맞게 이미지의 세로 크기 조정 */
+    left: 50%; /* 가운데로 이동 */
+    top: 70%; /* 가운데로 이동 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    overflow: hidden;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    z-index: 2;
+    text-align: center;
+}
+
+.slide-title {
+    color: white;
+    font-size: 64px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;
+}
+
+.slide-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 95%);
+    z-index: 3;
+    text-align: center;
+}
+
+.slide-title2 {
+    color: white;
+    font-size: 128px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* 콘텐츠1 */
+.con1{
+  background-color: #f5f5f5;
+  padding-bottom: 80px;
+}
+
+.count {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400; 
+    color: #42A5F6;
+    margin-top: 4px;
+}
+
+h1{
+    color: #222222;
+    font-size: 40px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;   
+
+    text-align: center;
+    padding-top: 150px;
+
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.rangeContainer{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+.rangeInput {
+    width: 100%;
+    background: linear-gradient(to right, #FFE283 0%, #FFE283 50%, #ececec 50%, #ececec 100%);
+    border-radius: 8px;
+    outline: none;
+    transition: all 450ms ease-in;
+    appearance: none;
+    accent-color: #ffca1d;
+  }
+
+/* 슬라이더 */
+:root {
+    --primary: #ec994b;
+    --white: #ffffff;
+    --bg: #f5f5f5;
+  }
+
+  .container {
+    width: 1200px;
+    margin: 50px auto;
+  }
+  
+  #tranding .tranding-slider {
+    height: 550px;
+    position: relative;
+  }
+  
+  .tranding-slide {
+    width: 400px;
+    height: 500px;
+    position: relative;
+  }
+  
+  .tranding-slide .tranding-slide-img img,
+  .tranding-slide .tranding-slide-img2 img,
+  .tranding-slide .tranding-slide-img3 img,
+  .tranding-slide .tranding-slide-img4 img,
+  .tranding-slide .tranding-slide-img5 img,
+  .tranding-slide .tranding-slide-img6 img {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .tranding-slide .tranding-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 500px;
+  }
+
+  .trip-name{
+    color: white;
+    font-size: 24px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;
+  }
+  
+  .tranding-slide-content .trip-num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: 400;
+  }
+  
+  .tranding-slide-content .tranding-slide-content-bottom {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    color: white;
+  }
+  
+  .trip-rating {
+    padding-top: 0;
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .trip-rating span{
+      color: white;
+      font-size: 20px;
+      font-family: 'Black Han Sans', sans-serif;
+      font-weight: 400;
+  }
+  
+  .rating ion-icon {
+    color: #ec994b;
+  }
+  
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    display: none;
+  }
+  
+  .tranding-slider-control {
+    width: 200px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tranding-slider-control .slider-arrow {
+    background: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  }
+
+  .tranding-slider-control .slider-arrow ion-icon {
+    font-size: 24px;
+    color: #222224;
+  }
+  
+  .tranding-slider-control .slider-arrow::after {
+    content: '';
+  }
+  
+  .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1)) !important;
+    margin: 0 4px !important;
+  }
+  
+  .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+    background: #ec994b !important;
+  }
+
+/* 콘텐츠2 */
+.con2{
+  height: 300px;
+  background-color: #333D4B;
+  padding-top: 100px;
+}
+
+h6{
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.subtxt{
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  text-align: center;
+
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+/* 콘텐츠3 */
+.con3{
+  background-color: white;
+  padding-bottom: 150px;
+}
+
+.card-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card{
+  width: 390px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card:hover{
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.trip-img{
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.trip-img img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.text-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 370px;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon{
+  font-size: 40px;
+  margin-right: 4px;
+}
+
+h3{
+  color:#444;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+  text-align: justify;
+}
+
+h3 span{
+  color:#666;
+  font-size: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+}
+
+h4{
+  color:#222;
+  font-size: 40px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 150px;
+  margin-bottom: 40px;
+
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.more-btn{
+  background:#2E324B ;
+  border-radius: 50px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  color:#ffffff;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.more-btn:hover{
+  background-color: #EEB408;
+}
+
+
+
+/* 푸터 */
+footer{
+    height: 250px;
+    background-color: #333D4B;
+  
+    padding-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
+  
+    margin-top: auto;
+}
+  
+.FT{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  
+h5{
+    font-size: 16px;
+    color:#E7E7E7;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300; 
+}
+  
+li{
+    list-style: none;
+}
+  
+li a{
+    text-decoration: none;
+    color:#E7E7E7;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+  
+li a:not(:last-of-type){
+    margin-right: 40px;
+}
+  
+.ex2{
+    font-size: 12px;
+    color:#E7E7E7;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400; 
+    line-height: 180%;
+}
